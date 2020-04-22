@@ -1,7 +1,7 @@
 
 function main {
   correct_guess=0
-  actual_number_of_files=$(ls | wc -l)
+  actual_number_of_files=$(ls -lah | grep '^-' | wc -l)
 
   while [[ $correct_guess -lt 1 ]]
   do
